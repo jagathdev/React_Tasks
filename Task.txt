@@ -1,0 +1,220 @@
+🟢 DAY 1 – useState + Rendering (FOUNDATION DAY)
+
+🔧 TASKS (Do ALL)
+
+Create a counter app with Increment / Decrement / Reset
+
+Render a list of users using map() (array of objects)
+
+Toggle Login / Logout text using boolean state
+
+Update object state (profile: name, age)
+
+Conditional rendering: show Admin / User
+
+Build a simple Like button
+
+Change background color on button click
+
+Add / Remove item from array state
+
+Disable button after click
+
+Simple form input (name only) using state
+
+
+🎤 INTERVIEW QUESTIONS (15)
+What is useState?
+
+Why does React re-render when state changes?
+
+Difference between state and normal variable
+
+Why state update is async?
+
+What happens if we mutate state directly?
+
+How does React identify state change?
+
+Why spread operator is used in state?
+
+Can we store object in useState?
+
+Can we store array in useState?
+
+What is conditional rendering?
+
+Difference between && and ternary in JSX
+
+What happens if we don’t give key in map?
+
+Why key should be unique?
+
+Can state be passed to child?
+
+What is single source of truth?
+
+
+🟡 DAY 2 – useRef + DOM CONTROL (REAL-TIME)
+🔧 TASKS
+Focus input on button click
+
+Clear input using ref
+
+Auto-save input to localStorage using ref
+
+Theme change using ref + Tailwind classes
+
+Scroll to top button
+
+Change font size using ref
+
+Video play/pause using ref
+
+Count button clicks without re-render
+
+Read input value without state
+
+Show/hide element using ref
+
+
+🎤 INTERVIEW QUESTIONS (15)
+What is useRef?
+
+Does useRef cause re-render?
+
+Difference between useRef and useState
+
+What is ref.current?
+
+Can useRef store any value?
+
+Why useRef is mutable?
+
+When should we avoid useState?
+
+Can useRef access DOM?
+
+Is useRef reactive?
+
+useRef vs document.getElementById
+
+Can we use multiple refs?
+
+useRef in form handling
+
+Real-time use case of useRef
+
+useRef with Tailwind – how?
+
+Can useRef replace useState?
+
+
+🔵 DAY 3 – useEffect + SIDE EFFECTS
+🔧 TASKS
+Console log on component mount
+
+Timer app (setInterval + cleanup)
+
+Fetch API data and render list
+
+Dependency-based effect (count change)
+
+Cleanup function example
+
+Scroll event listener
+
+Window resize listener
+
+Auto-focus input on load
+
+Title change using effect
+
+localStorage sync using effect
+
+
+🎤 INTERVIEW QUESTIONS (15)
+What is useEffect?
+
+Why do we need side effects?
+
+When does useEffect run?
+
+Difference between [] and no dependency
+
+What is cleanup function?
+
+Why cleanup is important?
+
+useEffect vs componentDidMount
+
+Can we have multiple useEffects?
+
+What happens if dependency is wrong?
+
+Infinite loop in useEffect – why?
+
+API call inside useEffect – why?
+
+useEffect with localStorage
+
+useEffect vs useLayoutEffect
+
+Is useEffect async?
+
+Best practices for useEffect
+
+
+🟣 DAY 4 – COMPONENTS + MINI PROJECTS
+🔧 TASKS (PROJECT-STYLE)
+Parent → Child props passing
+
+Child → Parent callback
+
+Container vs Presentational component
+
+Reusable Button component
+
+Card component rendering list
+
+Modal component show/hide
+
+Theme switcher component
+
+Counter as separate component
+
+Form component with validation
+
+Mini project: Todo App (Add/Delete/Complete)
+
+
+🎤 INTERVIEW QUESTIONS (15)
+What is a component?
+
+Functional vs Class component
+
+Props vs State
+
+Can child modify parent state?
+
+What is lifting state up?
+
+Container vs Presentational component
+
+What is reusable component?
+
+Why component reusability matters?
+
+What is prop drilling?
+
+How to avoid prop drilling?
+
+Component re-render reasons
+
+Keys in component list
+
+Controlled vs Uncontrolled component
+
+Folder structure in React project
+
+How React app starts rendering?
