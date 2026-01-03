@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Day2Task = () => {
     return (
@@ -58,11 +58,22 @@ export const ClearInput = () => {
 const AutoSave = () => {
 
     const saveRef = useRef<HTMLInputElement>(null)
-    const saveInput = () => {
 
+    const saveInput = (e: any) => {
+        const inputVal = e.target.value
+        localStorage.setItem("autoSaveData", inputVal)
     }
 
+    useEffect(() => {
+        const GetData = localStorage.getItem("autoSaveData")
+
+        if (GetData && saveRef.current) {
+            saveRef.current.value = GetData
+        }
+    }, [])
+
     return (<>
-        <input ref={saveRef} type="text" onChange={saveInput} />
+        <input ref={saveRef} type="text" onChange={saveInput} placeholder="Typehere...." />
+
     </>)
 }
