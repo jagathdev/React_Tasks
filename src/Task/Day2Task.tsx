@@ -16,6 +16,8 @@ const Day2Task = () => {
                 <ThemeChange />
                 <h1>5. Scroll to top button</h1>
                 <ScrollTop />
+                <h1>6. Change font size using ref</h1>
+                <FontIncrese />
             </div>
         </>
     )
@@ -133,8 +135,24 @@ export const ScrollTop = () => {
         // alert("TO goto top")
     }
 
-
     return (<>
         <button onClick={GoToTop}>Go To Top </button>
+    </>)
+}
+
+//6. Change font size using ref
+
+const FontIncrese = () => {
+
+    const fontRef = useRef<HTMLDivElement>(null)
+
+    const Increase = () => {
+        fontRef.current?.classList.add("text-5xl", "font-bold")
+    }
+    return (<>
+        <div>
+            <h1 ref={fontRef}>This is a Font Increase Component</h1>
+            <button onClick={Increase}>Increse Font Size</button>
+        </div>
     </>)
 }
