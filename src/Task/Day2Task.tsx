@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState, type InputEvent } from "react";
 
 const Day2Task = () => {
     return (
@@ -18,6 +18,13 @@ const Day2Task = () => {
                 <ScrollTop />
                 <h1>6. Change font size using ref</h1>
                 <FontIncrese />
+                <h1>7. Video play / pause using ref</h1>
+                <VideoPause />
+                <h1>8. Count clicks without re-render</h1>
+                <Counter />
+                <h1>9. Read input without state</h1>
+                <h1>10. Show / Hide element using ref</h1>
+
             </div>
         </>
     )
@@ -142,7 +149,7 @@ export const ScrollTop = () => {
 
 //6. Change font size using ref
 
-const FontIncrese = () => {
+export const FontIncrese = () => {
 
     const fontRef = useRef<HTMLDivElement>(null)
 
@@ -156,3 +163,66 @@ const FontIncrese = () => {
         </div>
     </>)
 }
+
+// 7. Video play / pause using ref
+import video from '../assets/MurugarVideo.mp4'
+
+export const VideoPause = () => {
+
+    const videoRef = useRef<HTMLVideoElement | null>(null)
+
+    const PlayandPauseVideo = () => {
+
+        // if (!videoRef) return;
+
+        if (videoRef.current?.paused) {
+            videoRef.current.play()
+        } else {
+            videoRef.current?.pause()
+        }
+
+    }
+
+    return (<>
+        <div>
+            <video src={video} ref={videoRef} width={300}></video>
+            <button onClick={PlayandPauseVideo}>
+                Play / Pause
+            </button>
+        </div>
+    </>)
+}
+
+// 8. Count clicks without re - render
+
+export const Counter = () => {
+    const countRef = useRef<number>(0)
+
+    const IncCount = () => {
+        countRef.current += 1
+        console.log(countRef.current)
+    }
+
+    const DecCount = () => {
+        countRef.current -= 1
+        console.log(countRef.current)
+    }
+
+    return (<>
+        <button onClick={IncCount}>Increment</button>
+        {/* <p ref={countRef}>CountValue</p> */}
+        <button onClick={DecCount}>Decrement</button>
+    </>)
+}
+
+// 9. Read input without state
+
+export const ReadInput = () => {
+
+    const inputRef = useRef<HTMLInputElement | null>(null)
+    return (<>
+        <input ref={inputRef} type="text" onChange={ } />
+    </>)
+}
+
+// 10. Show / Hide element using ref
