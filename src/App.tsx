@@ -5,6 +5,8 @@ import Home from "./pages/Home"
 import Task from "./Task/Task"
 import Day1Task from "./Task/Day1Task"
 import Day2Task from "./Task/Day2Task"
+import Day3Task from "./Task/Day3Task"
+import Day4Task from "./Task/Day4Task"
 
 
 const App: React.FC = () => {
@@ -18,6 +20,8 @@ const App: React.FC = () => {
           <Route path="/task" element={<Task />} />
           <Route path="/task/day1task" element={<Day1Task />} />
           <Route path="/task/day2task" element={<Day2Task />} />
+          <Route path="/task/day3task" element={<Day3Task />} />
+          <Route path="/task/day4task" element={<Day4Task />} />
         </Route>
       </Routes>
     </>
