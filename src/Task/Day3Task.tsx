@@ -60,6 +60,7 @@ export const TimerCleanup = () => {
     return (<>
         <div>
             <h1>Timer</h1>
+            <img src="vite.sv" alt="" />
             <button onClick={CleaupTimer}>CleanUp</button>
         </div>
     </>)
