@@ -42,26 +42,28 @@ export const Mount = () => {
 
 export const TimerCleanup = () => {
 
-    const [time, setTime] = useState<number>(0)
-
+    const [time, setTime] = useState<number>(0);
 
     useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(time => time + 1);
+        }, 1000);
 
-        setInterval(() => {
-            setTime(time + 1)
-        }, 1000)
+        // CLEANUP
+        return () => {
+            clearInterval(timer);
+            console.log("Timer cleaned up");
+        };
+    }, []);
 
-    }, [])
+    const CleanupTimer = () => {
+        setTime(0);
+    };
 
-    const CleaupTimer = () => {
-
-    }
-
-    return (<>
+    return (
         <div>
-            <h1>Timer</h1>
-            <img src="vite.sv" alt="" />
-            <button onClick={CleaupTimer}>CleanUp</button>
+            <h1>Timer: {time}</h1>
+            <button onClick={CleanupTimer}>Reset</button>
         </div>
-    </>)
-}
+    );
+};

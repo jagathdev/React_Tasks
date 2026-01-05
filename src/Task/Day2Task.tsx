@@ -153,6 +153,7 @@ export const ThemeChange = () => {
         setTheme(!theme)
 
         if (!ThemeRef.current) return;
+        console.log(!ThemeRef.current)
 
         if (darkRef.current) {
             ThemeRef.current.classList.add("bg-gray-900", "text-white")
