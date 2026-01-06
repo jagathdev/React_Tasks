@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { taskData } from "../Typescript/Interface"
 import { useContext } from "react";
 import { ThemeContext } from "../usecontext/ThemeContext";
+import Login from "../pages/Login";
 
 const Task = () => {
 
@@ -13,7 +14,10 @@ const Task = () => {
         { link: "/task/day3task", name: "Day 3 Task" },
         { link: "/task/day4task", name: "Day 4 Task" },
         { link: "/task/day5task", name: "Day 5 Task" },
+        { link: "/task/day6task", name: "Day 6 Task" },
     ];
+
+
 
     return (
         <>

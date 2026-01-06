@@ -1,3 +1,8 @@
 import { createContext } from "react";
 
-export const userContext = createContext(null)
+interface UserContextType {
+    loginData: string,
+    getInputData: () => void
+}
+
+export const UserContext = createContext<UserContextType | null>(null)

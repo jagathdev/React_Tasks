@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react"
+import { useState, } from "react"
 
 const Login = () => {
 
@@ -6,17 +6,12 @@ const Login = () => {
 
     const getLoginData = (e: any) => {
         e.preventDefault();
-
-        // setLoginData(e.target.value)
         console.log(loginData)
     }
 
     const getInputData = (e: any) => {
-
-        // const { name, password }: { name: string, password: number | string } = e.target
-
-        // setLoginData({ ...loginData, })
-
+        const { name, value } = e.target
+        setLoginData((loginData: any) => ({ ...loginData, [name]: value }))
     }
 
     return (
@@ -28,8 +23,9 @@ const Login = () => {
                 <input type="text" onChange={getInputData} name="password" placeholder="Enter password" />
                 <input type="submit" value="Login" />
             </form>
-        </div>
+
+        </div >
     )
 }
 
-export default Login
+export default Login;
