@@ -1,6 +1,9 @@
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { ThemeContext } from "../usecontext/ThemeContext"
 
 const Navbar = () => {
+    const { theme, themeChange } = useContext(ThemeContext)!;
     return (
         <>
             <div className="flex justify-between bg-blue-400 p-5">
@@ -8,8 +11,9 @@ const Navbar = () => {
                 <div className="flex gap-10">
                     <Link to='/' className="bg-black px-3 py-1 text-white rounded font-bold">Home</Link>
                     <Link to='/Task' className="bg-black text-white px-3 py-1 rounded font-bold">Task</Link>
+                    <button className={theme ? "bg-black text-white px-3 py-1 rounded font-bold" : "bg-white  px-3 py-1 rounded font-bold"} onClick={themeChange}>{theme ? "Dark" : "Light"}</button>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

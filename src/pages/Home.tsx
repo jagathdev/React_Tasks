@@ -1,6 +1,12 @@
+import { useContext } from "react";
+import { ThemeContext } from "../usecontext/ThemeContext";
+
 const Home = () => {
+    const { theme } = useContext(ThemeContext)!;
+
     return (
-        <div className="p-6 space-y-8">
+        <div className={theme ? "bg-yellow-200 p-6 space-y-8" : "bg-gray-800 text-white p-6 space-y-8"
+        }>
             <h1 className="text-3xl font-bold text-center">React Tasks – Practice Dashboard</h1>
 
             {/* ---------- DAY 1 ---------- */}
@@ -170,7 +176,7 @@ const Home = () => {
                     <li>How React starts rendering?</li>
                 </ol>
             </section>
-        </div>
+        </div >
     );
 };
 
